@@ -19,6 +19,7 @@ struct IUnknown;
 class SC_MainWindow;
 
 #include "sc_importWidget.hpp"
+#include "sc_recentWidget.hpp"
 
 class BattleNetImportWindow : public QWidget
 {
@@ -28,6 +29,7 @@ class BattleNetImportWindow : public QWidget
   SC_MainWindow* m_mainWindow;
   QShortcut* m_shortcut;
   BattleNetImportWidget* m_importWidget;
+  RecentCharactersWidget* m_recentWidget;
   bool m_embedded;
 
 public:

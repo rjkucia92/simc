@@ -9,6 +9,7 @@ BattleNetImportWindow::BattleNetImportWindow( SC_MainWindow* parent, bool embedd
     m_mainWindow( parent ),
     m_shortcut( embedded ? nullptr : new QShortcut( QKeySequence( "Ctrl+I" ), parent ) ),
     m_importWidget( new BattleNetImportWidget( this ) ),
+    m_recentWidget( new RecentCharactersWidget( this ) ),
     m_embedded( embedded )
 {
   if ( !m_embedded )

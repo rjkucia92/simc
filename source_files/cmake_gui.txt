@@ -33,6 +33,7 @@ sc_ImportThread.cpp
 sc_importWidget.cpp
 sc_importWindow.cpp
 sc_OptionsTab.cpp
+sc_recentWidget.cpp
 sc_SampleProfilesTab.cpp
 sc_SimulateTab.cpp
 sc_SimulationThread.cpp
