@@ -25,6 +25,14 @@ BattleNetImportWindow::BattleNetImportWindow( SC_MainWindow* parent, bool embedd
   connect( m_importWidget,
            SIGNAL( importTriggeredOut( const QString&, const QString&, const QString&, const QString& ) ), m_mainWindow,
            SLOT( startNewImport( const QString&, const QString&, const QString&, const QString& ) ) );
+
+  connect( m_importWidget,
+           SIGNAL( importTriggeredOut( const QString&, const QString&, const QString&, const QString& ) ), m_recentWidget,
+           SLOT( addImportedToon( const QString&, const QString&, const QString&, const QString& ) ) );
+
+  connect( m_recentWidget,
+           SIGNAL( rowClickedTriggeredOut( const QString&, const QString&, const QString&, const QString& ) ),
+           m_importWidget, SLOT( setImportToon( const QString&, const QString&, const QString&, const QString& ) ) );
 }
 
 void BattleNetImportWindow::toggle()

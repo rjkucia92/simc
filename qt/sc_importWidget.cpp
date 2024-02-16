@@ -223,3 +223,12 @@ void BattleNetImportWidget::populateSpecialization()
   m_specializationCombo->addItem( tr( "Third" ) );
   m_specializationCombo->addItem( tr( "Fourth" ) );
 }
+
+void BattleNetImportWidget::setImportToon( const QString& region, const QString& realm, const QString& character,
+                                           const QString& specialization )
+{
+  m_regionCombo->setCurrentText( region );
+  m_realmCombo->setCurrentText( realm );
+  m_character->setText( character );
+  m_specializationCombo->setCurrentText( specialization );
+}

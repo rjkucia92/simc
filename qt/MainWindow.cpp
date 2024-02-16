@@ -658,6 +658,13 @@ void SC_MainWindow::startNewImport( const QString& region, const QString& realm,
     }
   }
 
+    // record import history
+  QSettings settings;
+  QList<QVariant> importHist = settings.value( "user_data/importHistory" ).toList();
+
+  importHist.append( QVariant(QList {region, realm, character, specialization} ) );
+  settings.setValue( "user_data/importHistory", importHist );
+
   importThread->start( import_sim, region, realm, character, specialization );
   simulateTab->add_Text( defaultSimulateText, tr( "Importing" ) );
 }

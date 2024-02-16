@@ -80,6 +80,7 @@ signals:
 
 public slots:
   void armoryRegionChangedIn( const QString& );
+  void setImportToon( const QString&, const QString&, const QString&, const QString& );
 
 private slots:
   void returnPressed();
